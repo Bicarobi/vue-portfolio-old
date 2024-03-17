@@ -19,6 +19,11 @@ const routes = [
 		name: "portfolio",
 		component: PortfolioView,
 	},
+	{
+		path: "/:catchAll(.*)",
+		name: "about",
+		component: AboutView,
+	},
 ];
 
 const router = createRouter({

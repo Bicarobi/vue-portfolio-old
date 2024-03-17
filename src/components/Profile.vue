@@ -1,6 +1,7 @@
 <template>
-	<img class="profile-image" src="../assets/profile-placeholder.jpg" />
+	<div class="rainbow"><img class="profile-image" src="../assets/profile-placeholder.jpg" /></div>
 	<h2 class="profile-name">Robert Cmrečki</h2>
+	<a class="profile-title" href="https://urn.nsk.hr/urn:nbn:hr:122:388921"><h3>bacc. ing. techn. graph.</h3></a>
 	<div class="profile-tag-container">
 		<h4 class="profile-tag">Web Developer</h4>
 		<h4 class="profile-tag">Web Designer</h4>
@@ -11,13 +12,18 @@
 	<hr class="profile-line" />
 
 	<div class="profile-info-container">
-		<ProfileInfoTag />
-		<ProfileInfoTag />
-		<ProfileInfoTag />
-		<ProfileInfoTag />
+		<ProfileInfoTag type="email" description="cmrecki.robert@gmail.com" image="email-icon.svg" />
+		<ProfileInfoTag type="phone" description="+385 91 211 1165" image="phone-icon.svg" />
+		<ProfileInfoTag type="location" description="Croatia / Varaždin" image="location-icon.svg" />
 	</div>
 
-	<div class="profile-social-container"></div>
+	<hr class="profile-line" />
+
+	<div class="profile-social-container">
+		<a href="https://www.linkedin.com/in/robert-cmrecki/" target="_blank"> <img src="../assets/linkedin-icon.svg" /></a>
+		<a href="https://www.linkedin.com/in/robert-cmrecki/" target="_blank"><img src="../assets/instagram-icon.svg" /></a>
+		<a href="https://www.linkedin.com/in/robert-cmrecki/" target="_blank"> <img src="../assets/facebook-icon.svg" /></a>
+	</div>
 </template>
 
 <script>
@@ -31,8 +37,8 @@ export default {
 
 <style>
 .profile-image {
-	width: 50%;
-	height: auto;
+	width: 100%;
+	height: 100%;
 	border-radius: 25px;
 }
 
@@ -40,6 +46,12 @@ export default {
 	font-weight: bold;
 	color: #ebebeb;
 	margin: 50px 0 0 0;
+}
+
+.profile-title {
+	font-size: 0.8em;
+	color: #fbb300;
+	text-decoration: none;
 }
 
 .profile-tag-container {
@@ -52,7 +64,7 @@ export default {
 	flex-wrap: wrap;
 	gap: 5px;
 
-	margin: 50px 0 0 0;
+	margin: 35px 0 0 0;
 }
 
 .profile-tag {
@@ -80,11 +92,61 @@ export default {
 	align-items: center;
 	flex-direction: column;
 	flex-wrap: wrap;
-	gap: 10px;
+	gap: 20px;
 
 	margin: 0;
 }
 
 .profile-social-container {
+	width: 70%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	gap: 10px;
+
+	margin: 0;
+}
+
+.profile-social-container a {
+	max-width: 15%;
+}
+
+.profile-social-container img {
+	width: 100%;
+	cursor: pointer;
+}
+
+.rainbow {
+	position: relative;
+	z-index: 0;
+	width: 50%;
+	height: auto;
+	border-radius: 25px;
+	overflow: hidden;
+	padding: 2px;
+
+	&::before {
+		content: "";
+		position: absolute;
+		z-index: -2;
+		left: -50%;
+		top: -50%;
+		width: 200%;
+		height: 200%;
+		background-color: #399953;
+		background-repeat: no-repeat;
+		background-size: 50% 50%, 50% 50%;
+		background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+		background-image: linear-gradient(#7b42e6, #7b42e6), linear-gradient(#fbb300, #fbb300), linear-gradient(#7b42e6, #7b42e6), linear-gradient(#fbb300, #fbb300);
+		animation: rotate 4s linear infinite;
+	}
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(1turn);
+	}
 }
 </style>

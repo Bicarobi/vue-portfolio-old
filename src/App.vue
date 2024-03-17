@@ -5,9 +5,16 @@
 		</div>
 		<div class="grid-right-side">
 			<nav>
-				<router-link to="/">About</router-link>
-				<router-link :to="{ name: 'resume' }">Resume</router-link>
-				<router-link :to="{ name: 'portfolio' }">Portfolio</router-link>
+				<div class="nav-grid-container">
+					<div class="nav-grid-left-side">
+						<div class="current-page">{{ route.name }}</div>
+					</div>
+					<div class="nav-grid-right-side">
+						<router-link to="/">About</router-link>
+						<router-link :to="{ name: 'resume' }">Resume</router-link>
+						<router-link :to="{ name: 'portfolio' }">Portfolio</router-link>
+					</div>
+				</div>
 			</nav>
 			<router-view />
 		</div>
@@ -16,10 +23,19 @@
 
 <script>
 import Profile from "./components/Profile.vue";
+import { useRoute } from "vue-router";
 
 export default {
 	name: "App",
 	components: { Profile },
+	data() {
+		return {
+			page: "about",
+		};
+	},
+	computed: {
+		route: () => useRoute(),
+	},
 };
 </script>
 
@@ -31,8 +47,48 @@ export default {
 	text-align: center;
 }
 
-#app nav {
-	padding: 30px;
+#app nav .nav-grid-left-side {
+	grid-area: left-side;
+	width: 100%;
+	padding-left: 40px;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-end;
+}
+
+#app nav .nav-grid-right-side {
+	grid-area: right-side;
+	width: fit-content;
+	height: 60px;
+	padding: 0 40px;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+
+	border-bottom-left-radius: 15px;
+	border-top-right-radius: 15px;
+
+	background-color: #2f2f2f;
+}
+
+#app nav .nav-grid-container {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: auto;
+	grid-template-areas: "left-side right-side";
+	justify-items: end;
+}
+
+#app nav .current-page {
+	font-size: 2rem;
+	color: #ebebeb;
+	text-transform: capitalize;
+	font-weight: bold;
 }
 
 #app nav a {
@@ -41,7 +97,7 @@ export default {
 }
 
 #app nav a.router-link-exact-active {
-	color: #42b983;
+	color: #fbb300;
 }
 
 #app .grid-left-side {
