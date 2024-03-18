@@ -14,6 +14,9 @@
 						<router-link :to="{ name: 'resume' }">Resume</router-link>
 						<router-link :to="{ name: 'portfolio' }">Portfolio</router-link>
 					</div>
+					<div class="nav-grid-bottom-side">
+						<hr class="nav-line" />
+					</div>
 				</div>
 			</nav>
 			<router-view />
@@ -76,11 +79,19 @@ export default {
 	background-color: #2f2f2f;
 }
 
+#app nav .nav-grid-bottom-side {
+	grid-area: bottom-side;
+	width: 100%;
+	padding-left: 40px;
+}
+
 #app nav .nav-grid-container {
 	display: grid;
 	grid-template-columns: 50% 50%;
-	grid-template-rows: auto;
-	grid-template-areas: "left-side right-side";
+	grid-template-rows: auto 75px;
+	grid-template-areas:
+		"left-side right-side"
+		"bottom-side bottom-side";
 	justify-items: end;
 }
 
@@ -89,15 +100,25 @@ export default {
 	color: #ebebeb;
 	text-transform: capitalize;
 	font-weight: bold;
+	line-height: 0.6em;
 }
 
 #app nav a {
 	font-weight: bold;
 	color: #ebebeb;
+	text-decoration: none;
 }
 
 #app nav a.router-link-exact-active {
 	color: #fbb300;
+	text-decoration: underline;
+}
+
+#app .nav-line {
+	width: 3em;
+	border-radius: 15px;
+	border: solid 3px #fbb300;
+	margin: 30px 0px 50px 0px;
 }
 
 #app .grid-left-side {

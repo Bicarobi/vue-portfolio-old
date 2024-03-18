@@ -6,7 +6,7 @@ import PortfolioView from "../views/PortfolioView.vue";
 const routes = [
 	{
 		path: "/",
-		name: "about",
+		name: "about me",
 		component: AboutView,
 	},
 	{

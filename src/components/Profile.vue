@@ -7,6 +7,7 @@
 		<h4 class="profile-tag">Web Designer</h4>
 		<h4 class="profile-tag">3D Designer</h4>
 		<h4 class="profile-tag">Graphic Designer</h4>
+		<h4 class="profile-tag">Photographer</h4>
 	</div>
 
 	<hr class="profile-line" />
