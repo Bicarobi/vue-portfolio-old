@@ -22,8 +22,8 @@
 
 	<div class="profile-social-container">
 		<a href="https://www.linkedin.com/in/robert-cmrecki/" target="_blank"> <img src="../assets/linkedin-icon.svg" /></a>
-		<a href="https://www.linkedin.com/in/robert-cmrecki/" target="_blank"><img src="../assets/instagram-icon.svg" /></a>
-		<a href="https://www.linkedin.com/in/robert-cmrecki/" target="_blank"> <img src="../assets/facebook-icon.svg" /></a>
+		<a href="https://github.com/Bicarobi/" target="_blank"> <img src="../assets/github-icon.svg" /></a>
+		<a href="https://www.instagram.com/ro2tsa/" target="_blank"><img src="../assets/instagram-icon.svg" /></a>
 	</div>
 </template>
 

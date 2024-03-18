@@ -16,10 +16,11 @@
 	<div class="about-doing-container">
 		<h1>What I'm Doing</h1>
 		<div class="about-card-container">
-			<AboutCard image="email-icon.svg" type="web design" description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam." />
+			<AboutCard v-for="card in cards" :key="card.type" :type="card.type" :description="card.description" :image="card.image" />
+			<!-- <AboutCard image="email-icon.svg" type="web design" description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam." />
 			<AboutCard image="email-icon.svg" type="web developer" description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam." />
 			<AboutCard image="email-icon.svg" type="3D designer" description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam." />
-			<AboutCard image="email-icon.svg" type="photographer" description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam." />
+			<AboutCard image="email-icon.svg" type="photographer" description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam." /> -->
 		</div>
 	</div>
 </template>
@@ -30,6 +31,16 @@ import AboutCard from "../components/AboutCard.vue";
 export default {
 	name: "About",
 	components: { AboutCard },
+	data() {
+		return {
+			cards: [
+				{ type: "web developer", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", image: "development-icon.svg" },
+				{ type: "web designer", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", image: "design-icon.svg" },
+				{ type: "3D designer", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", image: "3d-icon.svg" },
+				{ type: "photographer", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", image: "photo-icon.svg" },
+			],
+		};
+	},
 };
 </script>
 

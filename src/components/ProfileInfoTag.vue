@@ -44,7 +44,7 @@ export default {
 }
 
 .profile-info-image {
-	width: 50%;
+	width: 70%;
 	height: auto;
 	border-radius: 10px;
 	padding: 5px;
