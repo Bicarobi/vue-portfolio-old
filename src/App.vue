@@ -125,16 +125,17 @@ export default {
 	grid-area: left-side;
 	background-color: #1e1e1f;
 	padding: 50px 0 50px 0;
-
 	border-radius: 15px;
 	border-style: solid;
 	border-width: 1px;
 	border-color: #2f2f2f;
-
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	height: fit-content;
+	width: 20%;
+	position: fixed;
 }
 
 #app .grid-right-side {
@@ -145,6 +146,8 @@ export default {
 	border-style: solid;
 	border-width: 1px;
 	border-color: #2f2f2f;
+
+	padding-bottom: 30px;
 }
 
 #app .grid-container {
