@@ -49,7 +49,7 @@ export default {
 	border-radius: 10px;
 	padding: 5px;
 	box-shadow: #171717 0px 4px 6px 0px;
-	color: #581fc6;
+	background-color: #2b2b2b;
 }
 
 .profile-info-type {

@@ -20,6 +20,14 @@ export default {
 .about-card-grid-left-side {
 	grid-area: left-side;
 	width: 100%;
+	height: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
 }
 
 .about-card-grid-right-side {
@@ -34,7 +42,7 @@ export default {
 
 .about-card-grid-container {
 	display: grid;
-	grid-template-columns: 1fr 4fr;
+	grid-template-columns: 1fr 5fr;
 	grid-template-rows: auto;
 	grid-template-areas: "left-side right-side";
 	gap: 20px;
@@ -43,12 +51,11 @@ export default {
 	box-shadow: #171717 0px 4px 6px 0px;
 	border-radius: 15px;
 	background-color: #2b2b2b;
-	padding: 15px;
+	padding: 20px;
 }
 
 .about-card-image {
-	width: 100%;
-	height: auto;
+	width: 70%;
 	border-radius: 10px;
 	color: #581fc6;
 }

@@ -13,9 +13,11 @@
 	<hr class="profile-line" />
 
 	<div class="profile-info-container">
-		<ProfileInfoTag type="email" description="cmrecki.robert@gmail.com" image="email-icon.svg" />
+		<!-- <ProfileInfoTag type="email" description="cmrecki.robert@gmail.com" image="email-icon.svg" />
 		<ProfileInfoTag type="phone" description="+385 91 211 1165" image="phone-icon.svg" />
-		<ProfileInfoTag type="location" description="Croatia / Varaždin" image="location-icon.svg" />
+		<ProfileInfoTag type="location" description="Croatia / Varaždin" image="location-icon.svg" /> -->
+
+		<ProfileInfoTag v-for="tag in tags" :key="tag.type" :type="tag.type" :description="tag.description" :image="tag.image" />
 	</div>
 
 	<hr class="profile-line" />
@@ -33,6 +35,15 @@ import ProfileInfoTag from "../components/ProfileInfoTag.vue";
 export default {
 	name: "Profile",
 	components: { ProfileInfoTag },
+	data() {
+		return {
+			tags: [
+				{ type: "email", description: "cmrecki.robert@gmail.com", image: "email-icon.svg" },
+				{ type: "phone", description: "+385 91 211 1165", image: "phone-icon.svg" },
+				{ type: "location", description: "Croatia / Varaždin", image: "location-icon.svg" },
+			],
+		};
+	},
 };
 </script>
 

@@ -111,7 +111,7 @@ export default {
 
 #app nav a.router-link-exact-active {
 	color: #fbb300;
-	text-decoration: underline;
+	/* text-decoration: underline; */
 }
 
 #app .nav-line {

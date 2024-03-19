@@ -17,10 +17,6 @@
 		<h1>What I'm Doing</h1>
 		<div class="about-card-container">
 			<AboutCard v-for="card in cards" :key="card.type" :type="card.type" :description="card.description" :image="card.image" />
-			<!-- <AboutCard image="email-icon.svg" type="web design" description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam." />
-			<AboutCard image="email-icon.svg" type="web developer" description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam." />
-			<AboutCard image="email-icon.svg" type="3D designer" description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam." />
-			<AboutCard image="email-icon.svg" type="photographer" description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam." /> -->
 		</div>
 	</div>
 </template>
@@ -34,10 +30,10 @@ export default {
 	data() {
 		return {
 			cards: [
-				{ type: "web developer", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", image: "development-icon.svg" },
-				{ type: "web designer", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", image: "design-icon.svg" },
-				{ type: "3D designer", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", image: "3d-icon.svg" },
-				{ type: "photographer", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", image: "photo-icon.svg" },
+				{ type: "web development", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", image: "development-icon.svg" },
+				{ type: "web design", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", image: "design-icon.svg" },
+				{ type: "3D design", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", image: "3d-icon.svg" },
+				{ type: "photography", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", image: "photo-icon.svg" },
 			],
 		};
 	},
@@ -46,7 +42,7 @@ export default {
 
 <style>
 .about-text-container {
-	padding: 0px 40px 0px 40px;
+	padding: 0px 40px;
 	margin: 0px 0px 50px 0px;
 
 	text-align: justify;
