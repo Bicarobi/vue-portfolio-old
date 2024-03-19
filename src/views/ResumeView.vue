@@ -79,7 +79,7 @@ export default {
 }
 
 .resume-info-line {
-	width: 80%;
+	width: calc(100% - 80px);
 	margin: 0px auto 20px auto;
 	border: 1px solid #292929;
 	border-radius: 1px;

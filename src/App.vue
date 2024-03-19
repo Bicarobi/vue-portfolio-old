@@ -13,6 +13,7 @@
 						<router-link to="/">About</router-link>
 						<router-link :to="{ name: 'resume' }">Resume</router-link>
 						<router-link :to="{ name: 'portfolio' }">Portfolio</router-link>
+						<router-link :to="{ name: 'contact' }">Contact</router-link>
 					</div>
 					<div class="nav-grid-bottom-side">
 						<hr class="nav-line" />

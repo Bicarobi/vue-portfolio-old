@@ -20,6 +20,11 @@ const routes = [
 		component: PortfolioView,
 	},
 	{
+		path: "/contact",
+		name: "contact",
+		component: PortfolioView,
+	},
+	{
 		path: "/:catchAll(.*)",
 		name: "about",
 		component: AboutView,
