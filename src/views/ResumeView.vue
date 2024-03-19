@@ -24,8 +24,8 @@
 		<div class="resume-progress-bar-container">
 			<ProgressBar type="3D Design" percentage="90" />
 			<ProgressBar type="Web Development" percentage="80" />
-			<ProgressBar type="Web Design" percentage="70" />
-			<ProgressBar type="Graphic Design" percentage="60" />
+			<ProgressBar type="Web Design" percentage="80" />
+			<ProgressBar type="Graphic Design" percentage="70" />
 		</div>
 	</div>
 </template>
@@ -65,8 +65,6 @@ export default {
 	gap: 15px;
 	font-weight: bold;
 	color: #ebebeb;
-	margin-bottom: 20px;
-
 	width: 100%;
 }
 
@@ -91,7 +89,7 @@ export default {
 	width: 100%;
 	background-color: #2b2b2b;
 	border-radius: 15px;
-	padding: 20px;
+	padding: 20px 20px 5px 20px;
 	margin: 0px auto;
 	border-style: solid;
 	border-width: 1px;

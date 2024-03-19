@@ -3,6 +3,10 @@ body {
 	margin: 50px 150px 50px 150px;
 }
 
+html {
+	overflow-y: scroll;
+}
+
 html,
 body {
 	box-sizing: border-box;

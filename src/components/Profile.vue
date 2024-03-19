@@ -76,7 +76,7 @@ export default {
 	flex-wrap: wrap;
 	gap: 5px;
 
-	margin: 35px 0 0 0;
+	margin: 20px 0 0 0;
 }
 
 .profile-tag {
@@ -91,7 +91,7 @@ export default {
 
 .profile-line {
 	width: 80%;
-	margin: 30px 0;
+	margin: 20px 0;
 	border: 1px solid #292929;
 	border-radius: 1px;
 }
@@ -104,7 +104,7 @@ export default {
 	align-items: center;
 	flex-direction: column;
 	flex-wrap: wrap;
-	gap: 20px;
+	gap: 10px;
 
 	margin: 0;
 }
@@ -126,7 +126,7 @@ export default {
 }
 
 .profile-social-container img {
-	width: 100%;
+	width: 80%;
 	cursor: pointer;
 }
 
@@ -138,6 +138,10 @@ export default {
 	border-radius: 25px;
 	overflow: hidden;
 	padding: 2px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	&::before {
 		content: "";

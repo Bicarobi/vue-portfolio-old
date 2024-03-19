@@ -25,7 +25,8 @@ export default {
 }
 
 .progress-bar-fill {
-	background-color: #fbb300;
+	/* background-color: #fbb300; */
+	background-image: linear-gradient(to right, #fbb300, #fb7100);
 	border-radius: 20px;
 
 	height: 100%;
