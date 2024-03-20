@@ -12,7 +12,7 @@
 				<div v-if="work.type == filter || filter == null">{{ work.title }}</div> v-if="work.type == filter || filter == null"
 				<WorkCard :title="work.title" :type="work.type" :desc="work.desc" :img="work.img" :link="work.link" />
 			</div> -->
-			<WorkCard v-for="work in filterWorks(works)" :key="title" :title="work.title" :type="work.type" :desc="work.desc" :img="work.img" :link="work.link" />
+			<WorkCard v-for="work in filterWorks(works)" :key="title" :title="work.title" :type="replaceDash(work.type)" :desc="work.desc" :img="work.img" :link="work.link" />
 		</div>
 	</div>
 </template>
@@ -26,14 +26,14 @@ export default {
 	data() {
 		return {
 			works: [
-				{ title: "work", type: "web-design", desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", img: "", link: "" },
-				{ title: "work2", type: "3d-design", desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", img: "", link: "" },
-				{ title: "work3", type: "graphic-design", desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", img: "", link: "" },
-				{ title: "work4", type: "photography", desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", img: "", link: "" },
-				{ title: "work5", type: "web-design", desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", img: "", link: "" },
-				{ title: "work6", type: "3d-design", desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", img: "", link: "" },
-				{ title: "work7", type: "graphic-design", desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", img: "", link: "" },
-				{ title: "work8", type: "photography", desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", img: "", link: "" },
+				{ title: "work", type: "web-design", desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", img: "placeholder.png", link: "" },
+				{ title: "work2", type: "3d-design", desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", img: "placeholder.png", link: "" },
+				{ title: "work3", type: "graphic-design", desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", img: "placeholder.png", link: "" },
+				{ title: "work4", type: "photography", desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", img: "placeholder.png", link: "" },
+				{ title: "work5", type: "web-design", desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", img: "placeholder.png", link: "" },
+				{ title: "work6", type: "3d-design", desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", img: "placeholder.png", link: "" },
+				{ title: "work7", type: "graphic-design", desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", img: "placeholder.png", link: "" },
+				{ title: "work8", type: "photography", desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", img: "placeholder.png", link: "" },
 			],
 		};
 	},
@@ -46,6 +46,9 @@ export default {
 				console.log(works);
 				return works;
 			}
+		},
+		replaceDash(string) {
+			return string.replace("-", " ");
 		},
 	},
 };
