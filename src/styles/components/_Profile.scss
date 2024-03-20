@@ -16,10 +16,6 @@
 		font-weight: bold;
 		color: $white;
 		margin: 50px 0 0 0;
-
-		@media #{$mobile} {
-			color: $yellow;
-		}
 	}
 
 	> .title {

@@ -1,3 +1,119 @@
+#app > .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto;
+  grid-template-areas: "left-side right-side";
+  gap: 20px;
+}
+#app > .grid-container > .grid-right-side {
+  grid-area: right-side;
+  background-color: #1e1e1f;
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #2f2f2f;
+}
+#app > .grid-container > .grid-right-side > nav > .nav-grid-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto 75px;
+  grid-template-areas: "left-side right-side" "bottom-side bottom-side";
+  justify-items: end;
+}
+#app > .grid-container > .grid-right-side > nav > .nav-grid-container > .nav-grid-left-side {
+  grid-area: left-side;
+  width: 100%;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+#app > .grid-container > .grid-right-side > nav > .nav-grid-container > .nav-grid-left-side > .current-page {
+  font-size: 2rem;
+  color: #ebebeb;
+  text-transform: capitalize;
+  font-weight: bold;
+  line-height: 0.6em;
+}
+#app > .grid-container > .grid-right-side > nav > .nav-grid-container > .nav-grid-right-side {
+  grid-area: right-side;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 60px;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: #2f2f2f;
+}
+#app > .grid-container > .grid-right-side > nav > .nav-grid-container > .nav-grid-right-side > a {
+  font-weight: bold;
+  color: #ebebeb;
+  text-decoration: none;
+}
+#app > .grid-container > .grid-right-side > nav > .nav-grid-container > .nav-grid-right-side > a.router-link-exact-active {
+  color: #fbb300;
+}
+#app > .grid-container > .grid-right-side > nav > .nav-grid-container > .nav-grid-bottom-side {
+  grid-area: bottom-side;
+  width: 100%;
+  padding-left: 40px;
+}
+#app > .grid-container > .grid-right-side > nav > .nav-grid-container > .nav-grid-bottom-side > .nav-line {
+  width: 3em;
+  border-radius: 15px;
+  border: solid 3px #fbb300;
+  margin: 30px 0px 50px 0px;
+}
+#app > .grid-container > .grid-left-side {
+  grid-area: left-side;
+  background-color: #1e1e1f;
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #2f2f2f;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 20%;
+  position: fixed;
+}
+@media (max-width: 600px) {
+  #app > .grid-container > .grid-left-side {
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+}
+
+.about-container {
+  width: 100%;
+  height: 100%;
+  padding: 0px 40px 30px 40px;
+}
+.about-container > .text-container {
+  margin: 0px 0px 50px 0px;
+  font-size: 1.2em;
+  text-align: justify;
+  color: #727272;
+}
+.about-container > .doing-container {
+  text-align: justify;
+  color: #ebebeb;
+}
+.about-container > .doing-container > .card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 .profile-container {
   padding: 50px 0 50px 0;
   display: flex;
@@ -14,11 +130,6 @@
   font-weight: bold;
   color: #ebebeb;
   margin: 50px 0 0 0;
-}
-@media (max-width: 900px) {
-  .profile-container > .name {
-    color: #fbb300;
-  }
 }
 .profile-container > .title {
   font-size: 0.8em;
@@ -112,89 +223,97 @@
     transform: rotate(1turn);
   }
 }
-#app > .grid-container {
+.profile-info-tag-container {
+  width: 100%;
+  height: 100%;
+}
+.profile-info-tag-container > .grid-container {
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: auto;
   grid-template-areas: "left-side right-side";
-  gap: 20px;
+  width: 100%;
+  height: 100%;
 }
-#app > .grid-container > .grid-right-side {
-  grid-area: right-side;
-  background-color: #1e1e1f;
-  border-radius: 15px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #2f2f2f;
-}
-#app > .grid-container > .grid-right-side > nav > .nav-grid-container {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: auto 75px;
-  grid-template-areas: "left-side right-side" "bottom-side bottom-side";
-  justify-items: end;
-}
-#app > .grid-container > .grid-right-side > nav > .nav-grid-container > .nav-grid-left-side {
+.profile-info-tag-container > .grid-container > .grid-left-side {
   grid-area: left-side;
   width: 100%;
-  padding-left: 40px;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-end;
-}
-#app > .grid-container > .grid-right-side > nav > .nav-grid-container > .nav-grid-left-side > .current-page {
-  font-size: 2rem;
-  color: #ebebeb;
-  text-transform: capitalize;
-  font-weight: bold;
-  line-height: 0.6em;
-}
-#app > .grid-container > .grid-right-side > nav > .nav-grid-container > .nav-grid-right-side {
-  grid-area: right-side;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 60px;
-  padding: 0 40px;
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  border-bottom-left-radius: 15px;
-  border-top-right-radius: 15px;
-  background-color: #2f2f2f;
+  flex-direction: column;
 }
-#app > .grid-container > .grid-right-side > nav > .nav-grid-container > .nav-grid-right-side > a {
-  font-weight: bold;
-  color: #ebebeb;
-  text-decoration: none;
+.profile-info-tag-container > .grid-container > .grid-left-side > img {
+  width: 1.6em;
+  height: auto;
 }
-#app > .grid-container > .grid-right-side > nav > .nav-grid-container > .nav-grid-right-side > a.router-link-exact-active {
-  color: #fbb300;
-}
-#app > .grid-container > .grid-right-side > nav > .nav-grid-container > .nav-grid-bottom-side {
-  grid-area: bottom-side;
+.profile-info-tag-container > .grid-container > .grid-right-side {
+  grid-area: right-side;
   width: 100%;
-  padding-left: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
 }
-#app > .grid-container > .grid-right-side > nav > .nav-grid-container > .nav-grid-bottom-side > .nav-line {
-  width: 3em;
+.profile-info-tag-container > .grid-container > .grid-right-side > .type {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #727272;
+  font-size: 0.8em;
+}
+.profile-info-tag-container > .grid-container > .grid-right-side > .description {
+  color: #ebebeb;
+  font-size: 0.9em;
+  word-break: break-all;
+}
+
+.about-card-container {
+  max-width: calc(50% - 10px);
+}
+.about-card-container > .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: auto;
+  grid-template-areas: "left-side right-side";
+  gap: 20px;
+  width: 100%;
+  box-shadow: #171717 0px 4px 6px 0px;
   border-radius: 15px;
-  border: solid 3px #fbb300;
-  margin: 30px 0px 50px 0px;
+  background-color: #2b2b2b;
+  padding: 20px;
 }
-#app > .grid-container > .grid-left-side {
+.about-card-container > .grid-container > .grid-left-side {
   grid-area: left-side;
-  background-color: #1e1e1f;
-  border-radius: 15px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #2f2f2f;
-  height: -moz-fit-content;
-  height: fit-content;
-  width: 20%;
-  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about-card-container > .grid-container > .grid-right-side {
+  grid-area: right-side;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.about-card-container > .grid-container > .grid-right-side > .card-type {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #727272;
+  font-size: 0.8em;
+}
+.about-card-container > .grid-container > .grid-right-side > .card-desc {
+  color: #ebebeb;
+  font-size: 0.9em;
+  word-break: break-all;
+}
+.about-card-container > .grid-container > .card-image {
+  width: 3rem;
 }
 
 body {

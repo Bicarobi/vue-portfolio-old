@@ -42,33 +42,3 @@ export default {
 	},
 };
 </script>
-
-<style scoped>
-.about-container {
-	width: 100%;
-	height: 100%;
-	padding: 0px 40px 30px 40px;
-}
-
-.about-container > .text-container {
-	margin: 0px 0px 50px 0px;
-
-	font-size: 1.2em;
-	text-align: justify;
-	color: #727272;
-}
-
-.about-container > .doing-container {
-	text-align: justify;
-	color: #ebebeb;
-}
-
-.doing-container > .card-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: row;
-	flex-wrap: wrap;
-	gap: 20px;
-}
-</style>

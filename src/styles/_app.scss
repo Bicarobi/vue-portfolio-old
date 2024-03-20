@@ -99,5 +99,11 @@
 		height: fit-content;
 		width: 20%;
 		position: fixed;
+
+		@media #{$mobile} {
+			top: 20px;
+			left: 50%;
+			transform: translate(-50%, 0%);
+		}
 	}
 }
