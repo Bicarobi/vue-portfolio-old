@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import AboutView from "../views/AboutView.vue";
 import ResumeView from "../views/ResumeView.vue";
 import PortfolioView from "../views/PortfolioView.vue";
+import ContactView from "../views/ContactView.vue";
 
 const routes = [
 	{
@@ -15,14 +16,15 @@ const routes = [
 		component: ResumeView,
 	},
 	{
-		path: "/portfolio",
+		path: "/portfolio/:filter?",
 		name: "portfolio",
 		component: PortfolioView,
+		props: true,
 	},
 	{
 		path: "/contact",
 		name: "contact",
-		component: PortfolioView,
+		component: ContactView,
 	},
 	{
 		path: "/:catchAll(.*)",
