@@ -8,10 +8,11 @@
 			<router-link :to="{ name: 'portfolio', params: { filter: 'photography' } }">Photography</router-link>
 		</div>
 		<div class="works-container">
-			<div v-for="work in filterWorks(works)" :key="title">
-				<!-- <div v-if="work.type == filter || filter == null">{{ work.title }}</div> v-if="work.type == filter || filter == null"-->
-				<WorkCard :title="work.title" :type="work.type" :desc="work.desc" />
-			</div>
+			<!-- 			<div v-for="work in filterWorks(works)" :key="title">
+				<div v-if="work.type == filter || filter == null">{{ work.title }}</div> v-if="work.type == filter || filter == null"
+				<WorkCard :title="work.title" :type="work.type" :desc="work.desc" :img="work.img" :link="work.link" />
+			</div> -->
+			<WorkCard v-for="work in filterWorks(works)" :key="title" :title="work.title" :type="work.type" :desc="work.desc" :img="work.img" :link="work.link" />
 		</div>
 	</div>
 </template>
@@ -25,14 +26,18 @@ export default {
 	data() {
 		return {
 			works: [
-				{ title: "work", type: "web-design", desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam." },
-				{ title: "work2", type: "3d-design", desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam." },
-				{ title: "work3", type: "graphic-design", desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam." },
-				{ title: "work4", type: "photography", desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam." },
+				{ title: "work", type: "web-design", desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", img: "", link: "" },
+				{ title: "work2", type: "3d-design", desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", img: "", link: "" },
+				{ title: "work3", type: "graphic-design", desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", img: "", link: "" },
+				{ title: "work4", type: "photography", desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", img: "", link: "" },
+				{ title: "work5", type: "web-design", desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", img: "", link: "" },
+				{ title: "work6", type: "3d-design", desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", img: "", link: "" },
+				{ title: "work7", type: "graphic-design", desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", img: "", link: "" },
+				{ title: "work8", type: "photography", desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam.", img: "", link: "" },
 			],
 		};
 	},
-	computed: {
+	methods: {
 		filterWorks(works) {
 			if (this.filter) {
 				console.log(this.works.filter((work) => work));
@@ -50,7 +55,7 @@ export default {
 .portfolio-container {
 	width: 100%;
 	height: 100%;
-	padding-left: 40px;
+	padding: 0 40px;
 
 	color: #ebebeb;
 }
@@ -59,7 +64,7 @@ export default {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	gap: 10px;
+	gap: 20px;
 }
 
 .portfolio-container a {
@@ -76,5 +81,8 @@ export default {
 .portfolio-container .works-container {
 	display: flex;
 	margin-top: 50px;
+	gap: 20px;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 </style>
