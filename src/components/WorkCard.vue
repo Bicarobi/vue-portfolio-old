@@ -23,7 +23,7 @@ export default {
 
 <style>
 .work-card-container {
-	max-width: calc(33% - 15px);
+	max-width: calc(25% - 15px);
 	color: #ebebeb;
 	width: 100%;
 

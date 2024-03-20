@@ -1,11 +1,13 @@
 <template>
-	<div class="about-card-grid-container">
-		<div class="about-card-grid-left-side">
-			<img class="about-card-image" :src="require('../assets/' + image)" />
-		</div>
-		<div class="about-card-grid-right-side">
-			<div class="about-card-type">{{ type }}</div>
-			<div class="about-card-description">{{ description }}</div>
+	<div class="about-card-container">
+		<div class="grid-container">
+			<div class="grid-left-side">
+				<img class="card-image" :src="require('../assets/' + image)" />
+			</div>
+			<div class="grid-right-side">
+				<div class="card-type">{{ type }}</div>
+				<div class="card-desc">{{ description }}</div>
+			</div>
 		</div>
 	</div>
 </template>
@@ -16,31 +18,8 @@ export default {
 };
 </script>
 
-<style>
-.about-card-grid-left-side {
-	grid-area: left-side;
-	width: 100%;
-	height: 100%;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	aspect-ratio: 1 / 1;
-	object-fit: cover;
-}
-
-.about-card-grid-right-side {
-	grid-area: right-side;
-	width: 100%;
-
-	display: flex;
-	justify-content: flex-start;
-	align-items: flex-start;
-	flex-direction: column;
-}
-
-.about-card-grid-container {
+<style scoped>
+.about-card-container > .grid-container {
 	display: grid;
 	grid-template-columns: 1fr 5fr;
 	grid-template-rows: auto;
@@ -54,20 +33,41 @@ export default {
 	padding: 20px;
 }
 
-.about-card-image {
-	width: 70%;
-	border-radius: 10px;
-	color: #581fc6;
+.grid-container > .grid-left-side {
+	grid-area: left-side;
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
 }
 
-.about-card-type {
+.grid-container > .grid-right-side {
+	grid-area: right-side;
+	width: 100%;
+
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+.grid-container > .card-image {
+	width: 3rem;
+}
+
+.grid-right-side > .card-type {
 	text-transform: uppercase;
 	font-weight: bold;
 	color: #727272;
 	font-size: 0.8em;
 }
 
-.about-card-description {
+.grid-right-side > .card-desc {
 	color: #ebebeb;
 	font-size: 0.9em;
 	word-break: break-all;

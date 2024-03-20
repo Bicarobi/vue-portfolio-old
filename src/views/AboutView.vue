@@ -43,32 +43,32 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .about-container {
 	width: 100%;
 	height: 100%;
 	padding: 0px 40px 30px 40px;
+}
 
-	.text-container {
-		margin: 0px 0px 50px 0px;
+.about-container > .text-container {
+	margin: 0px 0px 50px 0px;
 
-		font-size: 1.2em;
-		text-align: justify;
-		color: #727272;
-	}
+	font-size: 1.2em;
+	text-align: justify;
+	color: #727272;
+}
 
-	.doing-container {
-		text-align: justify;
-		color: #ebebeb;
+.about-container > .doing-container {
+	text-align: justify;
+	color: #ebebeb;
+}
 
-		.card-container {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: row;
-			flex-wrap: wrap;
-			gap: 20px;
-		}
-	}
+.doing-container > .card-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 20px;
 }
 </style>

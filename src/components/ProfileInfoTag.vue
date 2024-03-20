@@ -21,6 +21,11 @@ export default {
 	grid-area: left-side;
 	width: 100%;
 	background-color: #1e1e1f;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 
 .profile-info-grid-right-side {
@@ -40,16 +45,17 @@ export default {
 	grid-template-columns: 1fr 3fr;
 	grid-template-rows: auto;
 	grid-template-areas: "left-side right-side";
-	gap: 10px;
+	width: 100%;
+	height: 100%;
 }
 
 .profile-info-image {
-	width: 70%;
+	width: 1.6em;
 	height: auto;
-	border-radius: 10px;
+	/* border-radius: 10px;
 	padding: 5px;
 	box-shadow: #171717 0px 4px 6px 0px;
-	background-color: #2b2b2b;
+	background-color: #2b2b2b; */
 }
 
 .profile-info-type {
