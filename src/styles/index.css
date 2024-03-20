@@ -1,3 +1,12 @@
+:root {
+  --icon-size: 26px;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --icon-size: 16px;
+  }
+}
 #app > .grid-container {
   display: grid;
   grid-template-columns: 1fr 3fr;
@@ -87,6 +96,7 @@
     top: 20px;
     left: 50%;
     transform: translate(-50%, 0%);
+    width: calc(100% - 40px);
   }
 }
 
@@ -112,6 +122,86 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 20px;
+}
+
+.contact-container {
+  width: 100%;
+  height: 100%;
+  padding: 0px 40px 30px 40px;
+}
+
+.portfolio-container {
+  width: 100%;
+  height: 100%;
+  padding: 0px 40px 30px 40px;
+  color: #ebebeb;
+}
+.portfolio-container > .type-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.portfolio-container > .type-container > a {
+  font-weight: bold;
+  color: #ebebeb;
+  text-decoration: none;
+}
+.portfolio-container > .type-container > a.router-link-exact-active {
+  color: #fbb300;
+  /* text-decoration: underline; */
+}
+.portfolio-container > .works-container {
+  display: flex;
+  margin-top: 50px;
+  gap: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.resume-container {
+  width: 100%;
+  height: 100%;
+  padding: 0px 40px 30px 40px;
+}
+.resume-container > .info-line {
+  width: calc(100% - 80px);
+  margin: 0px auto 20px auto;
+  border: 1px solid #292929;
+  border-radius: 1px;
+}
+.resume-container > .content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.resume-container > .content-container > .resume-progress-bar-container {
+  width: 100%;
+  background-color: #2b2b2b;
+  border-radius: 15px;
+  padding: 20px 20px 5px 20px;
+  margin: 0px auto;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #383838;
+}
+.resume-container > .content-container > .type-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  font-weight: bold;
+  color: #ebebeb;
+  width: 100%;
+}
+.resume-container > .content-container > .type-container > img {
+  height: auto;
+  border-radius: 10px;
+  padding: 7px;
+  box-shadow: #171717 0px 4px 6px 0px;
+  background-color: #2b2b2b;
+  height: 2.5em;
 }
 
 .profile-container {
@@ -185,7 +275,7 @@
   max-width: 15%;
 }
 .profile-container > .social-container > a > img {
-  width: 26px;
+  width: var(--icon-size);
   height: auto;
 }
 
@@ -244,7 +334,7 @@
   flex-direction: column;
 }
 .profile-info-tag-container > .grid-container > .grid-left-side > img {
-  width: 1.6em;
+  width: var(--icon-size);
   height: auto;
 }
 .profile-info-tag-container > .grid-container > .grid-right-side {
@@ -314,6 +404,80 @@
 }
 .about-card-container > .grid-container > .card-image {
   width: 3rem;
+}
+
+.progress-bar-container {
+  margin-bottom: 20px;
+}
+.progress-bar-container > .text-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  color: #ebebeb;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+.progress-bar-container > .bar-outline {
+  width: 100%;
+  height: 7px;
+  border-radius: 20px;
+  background-color: #464646;
+}
+.progress-bar-container > .bar-outline > .bar-fill {
+  /* background-color: #fbb300; */
+  background-image: linear-gradient(to right, #fbb300, #fb7100);
+  border-radius: 20px;
+  height: 100%;
+}
+
+.work-card-container {
+  max-width: calc(25% - 15px);
+  color: #ebebeb;
+  width: 100%;
+}
+.work-card-container > .text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  margin-top: 10px;
+  text-transform: capitalize;
+}
+.work-card-container > .text-container > .title {
+  font-size: 1.2em;
+}
+.work-card-container > .text-container > .type {
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: bold;
+  color: #727272;
+  margin-top: 5px;
+}
+.work-card-container > img {
+  background-color: #2b2b2b;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.resume-info-container {
+  display: flex;
+  color: #ebebeb;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.resume-info-container > .resume-info-title {
+  font-size: 1.5em;
+}
+.resume-info-container > .resume-info-time {
+  color: #fbb300;
+  font-size: 1em;
+}
+.resume-info-container > .resume-info-desc {
+  font-size: 1.2em;
+  color: #727272;
 }
 
 body {

@@ -8,12 +8,12 @@
 
 		font-size: 1.2em;
 		text-align: justify;
-		color: #727272;
+		color: $gray5;
 	}
 
 	> .doing-container {
 		text-align: justify;
-		color: #ebebeb;
+		color: $white;
 
 		> .card-container {
 			display: flex;

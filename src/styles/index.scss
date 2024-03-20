@@ -1,24 +1,46 @@
-$yellow: #fbb300;
 $white: #ebebeb;
+
+$yellow: #fbb300;
+$orange: #fb7100;
 
 $gray1: #292929;
 $gray2: #2b2b2b;
 $gray3: #1e1e1f;
 $gray4: #2f2f2f;
 $gray5: #727272;
+$gray6: #464646;
+$gray7: #383838;
+$gray8: #171717;
+
+$icon-size-desktop: 26px;
+$icon-size-tablet: 20px;
+$icon-size-mobile: 16px;
 
 $mobile: "(max-width: 600px)";
 
-@import "_App";
+:root {
+	--icon-size: #{$icon-size-desktop};
+}
 
-@import "./views/_AboutView";
-@import "./views/_ContactView";
-@import "./views/_PortfolioView";
-@import "./views/_ResumeView";
+@media #{$mobile} {
+	:root {
+		--icon-size: #{$icon-size-mobile};
+	}
+}
 
-@import "./components/_Profile";
+@import "App";
+
+@import "./views/AboutView";
+@import "./views/ContactView";
+@import "./views/PortfolioView";
+@import "./views/ResumeView";
+
+@import "./components/Profile";
 @import "./components/ProfileInfoTag";
 @import "./components/AboutCard";
+@import "./components/ProgressBar";
+@import "./components/WorkCard";
+@import "./components/ResumeInfo";
 
 body {
 	background-color: #111;

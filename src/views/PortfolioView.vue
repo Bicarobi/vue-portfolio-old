@@ -53,39 +53,3 @@ export default {
 	},
 };
 </script>
-
-<style>
-.portfolio-container {
-	width: 100%;
-	height: 100%;
-	padding: 0px 40px 30px 40px;
-
-	color: #ebebeb;
-
-	.type-container {
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
-		gap: 20px;
-	}
-
-	a {
-		font-weight: bold;
-		color: #ebebeb;
-		text-decoration: none;
-	}
-
-	a.router-link-exact-active {
-		color: #fbb300;
-		/* text-decoration: underline; */
-	}
-
-	.works-container {
-		display: flex;
-		margin-top: 50px;
-		gap: 20px;
-		flex-direction: row;
-		flex-wrap: wrap;
-	}
-}
-</style>

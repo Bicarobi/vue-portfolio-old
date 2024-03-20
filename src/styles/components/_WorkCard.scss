@@ -1,0 +1,36 @@
+.work-card-container {
+	max-width: calc(25% - 15px);
+	color: $white;
+	width: 100%;
+
+	> .text-container {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		text-align: left;
+		margin-top: 10px;
+		text-transform: capitalize;
+
+		> .title {
+			font-size: 1.2em;
+		}
+
+		> .type {
+			text-transform: uppercase;
+			font-size: 1em;
+			font-weight: bold;
+			color: $gray5;
+			margin-top: 5px;
+		}
+
+		> .desc {
+		}
+	}
+
+	> img {
+		background-color: $gray2;
+		border-radius: 20px;
+
+		width: 100%;
+	}
+}
