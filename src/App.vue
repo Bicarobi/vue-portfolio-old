@@ -25,6 +25,12 @@
 								</option>
 							</select> -->
 						</div>
+						<div class="theme-switch-wrapper">
+							<label class="theme-switch" for="checkbox">
+								<input type="checkbox" id="checkbox" @change="switchTheme()" />
+								<div class="slider round"></div>
+							</label>
+						</div>
 					</div>
 					<div class="nav-grid-bottom-side">
 						<hr class="nav-line" />
@@ -40,12 +46,24 @@
 import Profile from "./components/Profile.vue";
 import { useRoute } from "vue-router";
 
+var switchTheme = false;
+
 export default {
 	name: "App",
 	components: { Profile },
 
 	computed: {
 		route: () => useRoute(),
+	},
+	methods: {
+		switchTheme() {
+			if (switchTheme) {
+				document.documentElement.setAttribute("data-theme", "dark");
+			} else {
+				document.documentElement.setAttribute("data-theme", "light");
+			}
+			switchTheme = !switchTheme;
+		},
 	},
 };
 </script>

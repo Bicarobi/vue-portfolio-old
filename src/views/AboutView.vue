@@ -2,9 +2,7 @@
 	<div class="about-container">
 		<div class="text-container">
 			<div>
-				Nakon završetka Elektrostrojarske Škole za Tehničara za Računalstvo, trenutno sam student na Sveučilištu Sjever, gdje sam postigao titulu prvostupnika inženjera multimedijske i
-				grafičke tehnologije (bacc. ing. techn. graph.). Nastavljam svoje obrazovanje na diplomskom studiju Multimedija. Odabrao sam ovaj smjer zbog svoje strasti prema programiranju i
-				povezivanju grafičkog dizajna s funkcionalnošću. Posebno sam zainteresiran za frontend i backend development jer smatram da su to područja koja oblikuju budućnost.
+				{{ $t("aboutView.text1") }}
 			</div>
 			<br />
 			<div>
