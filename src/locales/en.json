@@ -1,0 +1,10 @@
+{
+	"nav": {
+		"about": "About",
+		"resume": "Resume",
+		"portfolio": "Portfolio"
+	},
+	"profile": {
+		"location": "Croatia"
+	}
+}

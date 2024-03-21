@@ -15,11 +15,9 @@
 		<hr class="line" />
 
 		<div class="info-container">
-			<ProfileInfoTag v-for="tag in tags" :key="tag.type" :type="tag.type" :description="tag.description" :image="tag.image" />
+			<ProfileInfoTag v-for="tag in processedTags" :key="tag.type" :type="tag.type" :description="tag.description" :image="tag.image" />
 		</div>
-
 		<hr class="line" />
-
 		<div class="social-container">
 			<a href="https://www.linkedin.com/in/robert-cmrecki/" target="_blank"> <img src="../assets/linkedin-icon-yellow.svg" /></a>
 			<a href="https://github.com/Bicarobi/" target="_blank"> <img src="../assets/github-icon-yellow.svg" /></a>
@@ -34,14 +32,26 @@ import ProfileInfoTag from "../components/ProfileInfoTag.vue";
 export default {
 	name: "Profile",
 	components: { ProfileInfoTag },
-	data() {
-		return {
-			tags: [
+	computed: {
+		processedTags() {
+			const tags = [
 				{ type: "email", description: "cmrecki.robert@gmail.com", image: "email-icon-yellow.svg" },
 				{ type: "phone", description: "+385 91 211 1165", image: "phone-icon-yellow.svg" },
-				{ type: "location", description: "Croatia / Varaždin", image: "location-icon-yellow.svg" },
-			],
-		};
+				{ type: "location", description: " / Varaždin", image: "location-icon-yellow.svg" },
+			];
+
+			return tags.map((tag) => {
+				if (tag.type == "location") {
+					tag.description = this.$i18n.t("profile.location") + " / Varaždin";
+				}
+
+				return {
+					type: tag.type,
+					description: tag.description,
+					image: tag.image,
+				};
+			});
+		},
 	},
 };
 </script>

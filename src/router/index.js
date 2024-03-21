@@ -6,8 +6,8 @@ import ContactView from "../views/ContactView.vue";
 
 const routes = [
 	{
-		path: "/",
-		name: "about me",
+		path: "/about",
+		name: "about",
 		component: AboutView,
 	},
 	{
@@ -26,11 +26,11 @@ const routes = [
 		name: "contact",
 		component: ContactView,
 	}, */
-	{
-		path: "/:catchAll(.*)",
+	/* {
+		path: "/:catchAll(.*)*",
 		name: "about",
 		component: AboutView,
-	},
+	}, */
 ];
 
 const router = createRouter({
