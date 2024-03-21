@@ -47,6 +47,7 @@ import Profile from "./components/Profile.vue";
 import { useRoute } from "vue-router";
 
 var switchTheme = false;
+document.documentElement.setAttribute("data-theme", "dark");
 
 export default {
 	name: "App",

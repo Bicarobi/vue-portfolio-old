@@ -41,10 +41,16 @@ export default {
 			];
 
 			return tags.map((tag) => {
-				if (tag.type == "location") {
-					tag.description = this.$i18n.t("profile.location") + " / Varaždin";
+				if (tag.type == "phone") {
+					tag.type = this.$i18n.t("profile.phone");
 				}
 
+				if (tag.type == "location") {
+					if (tag.type == "location") {
+						tag.type = this.$i18n.t("profile.location");
+					}
+					tag.description = this.$i18n.t("profile.location2") + " / Varaždin";
+				}
 				return {
 					type: tag.type,
 					description: tag.description,

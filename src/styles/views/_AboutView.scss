@@ -8,12 +8,12 @@
 
 		font-size: $font-size-desktop;
 		text-align: justify;
-		color: $white;
+		color: var(--color1);
 	}
 
 	> .doing-container {
 		text-align: justify;
-		color: $white;
+		color: var(--color1);
 
 		> .card-container {
 			display: flex;

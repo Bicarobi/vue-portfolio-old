@@ -1,6 +1,6 @@
 .work-card-container {
 	max-width: calc(25% - 15px);
-	color: $white;
+	color: var(--color1);
 	width: 100%;
 
 	> .text-container {

@@ -5,7 +5,9 @@
 		"portfolio": "Portfolio"
 	},
 	"profile": {
-		"location": "Croatia"
+		"location": "location",
+		"location2": "Croatia",
+		"phone": "phone"
 	},
 	"aboutView": {
 		"text1": "After graduating from the School of Electrical Engineering for Computer Technicians, I am currently a student at the University of the North, where I obtained a bachelor's degree in multimedia and graphic technology engineering (bacc. ing. tech. graph.). I am continuing my education at the graduate study in Multimedia. I chose this major because of my passion for programming and connecting graphic design with functionality. I am particularly interested in frontend and backend development because I believe that these are areas that shape the future."
