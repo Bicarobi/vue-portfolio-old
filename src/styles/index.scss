@@ -12,6 +12,8 @@ $gray6: #464646;
 $gray7: #383838;
 $gray8: #171717;
 
+$font-size-desktop: 16px;
+
 $icon-size-desktop: 26px;
 $icon-size-tablet: 20px;
 $icon-size-mobile: 16px;
@@ -28,6 +30,8 @@ $mobile: "(max-width: 600px)";
 	}
 }
 
+@import "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap";
+
 @import "App";
 
 @import "./views/AboutView";
@@ -41,6 +45,7 @@ $mobile: "(max-width: 600px)";
 @import "./components/ProgressBar";
 @import "./components/WorkCard";
 @import "./components/ResumeInfo";
+/* @import "./components/ContactForm"; */
 
 body {
 	background-color: #111;
@@ -62,7 +67,8 @@ body {
 }
 
 #app {
-	font-family: Avenir, Helvetica, Arial, sans-serif;
+	/* 	font-family: Avenir, Helvetica, Arial, sans-serif; */
+	font-family: Roboto, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }

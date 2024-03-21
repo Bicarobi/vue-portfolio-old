@@ -21,11 +21,11 @@ const routes = [
 		component: PortfolioView,
 		props: true,
 	},
-	{
+	/* {
 		path: "/contact",
 		name: "contact",
 		component: ContactView,
-	},
+	}, */
 	{
 		path: "/:catchAll(.*)",
 		name: "about",

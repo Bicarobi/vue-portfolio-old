@@ -1,3 +1,4 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap";
 :root {
   --icon-size: 26px;
 }
@@ -107,9 +108,9 @@
 }
 .about-container > .text-container {
   margin: 0px 0px 50px 0px;
-  font-size: 1.2em;
+  font-size: 16px;
   text-align: justify;
-  color: #727272;
+  color: #ebebeb;
 }
 .about-container > .doing-container {
   text-align: justify;
@@ -190,18 +191,14 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 15px;
+  gap: 10px;
   font-weight: bold;
   color: #ebebeb;
   width: 100%;
 }
 .resume-container > .content-container > .type-container > img {
-  height: auto;
-  border-radius: 10px;
-  padding: 7px;
-  box-shadow: #171717 0px 4px 6px 0px;
-  background-color: #2b2b2b;
-  height: 2.5em;
+  margin: 7px;
+  height: var(--icon-size);
 }
 
 .profile-container {
@@ -480,6 +477,7 @@
   color: #727272;
 }
 
+/* @import "./components/ContactForm"; */
 body {
   background-color: #111;
   margin: 50px 150px 50px 150px;
@@ -501,7 +499,8 @@ body {
 }
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  /* 	font-family: Avenir, Helvetica, Arial, sans-serif; */
+  font-family: Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }/*# sourceMappingURL=index.css.map */

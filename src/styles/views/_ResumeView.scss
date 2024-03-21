@@ -31,19 +31,18 @@
 			flex-direction: row;
 			align-items: center;
 			justify-content: flex-start;
-			gap: 15px;
+			gap: 10px;
 			font-weight: bold;
 			color: $white;
 			width: 100%;
 
 			> img {
-				height: auto;
-				border-radius: 10px;
-				padding: 7px;
-				box-shadow: $gray8 0px 4px 6px 0px;
-				background-color: $gray2;
+				//border-radius: 10px;
+				margin: 7px;
+				//box-shadow: $gray8 0px 4px 6px 0px;
+				//background-color: $gray2;
 
-				height: 2.5em;
+				height: var(--icon-size);
 			}
 		}
 	}
